@@ -23,7 +23,7 @@ var routes = [{
 var router = new _vueRouter["default"]({
   mode: 'history',
   base: process.env.BASE_URL,
-  routes: []
+  routes: routes
 });
 var _default = router;
 exports["default"] = _default;

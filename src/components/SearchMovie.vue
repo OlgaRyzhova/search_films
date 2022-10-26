@@ -20,17 +20,19 @@
         <input type="radio" name="type" value="episode" id="">
         </label>
 
-        <router-link :to="`/movie/${movie.imdbID}`" v-for="movie in movies" :key="movie.imdbID">
-        <img :src="movie.Poster" :alt="movie.Title">
-        <h2>{{ movie.Title }}</h2>
-        </router-link>
-
+        <div class="movie_list">
+            <router-link :to="`/movie/${movie.imdbID}`" v-for="movie in movies" :key="movie.imdbID">
+            <img :src="movie.Poster" :alt="movie.Title">
+            <h2>{{ movie.Title }}</h2>
+            </router-link>
+        </div>
+        
     </div>
 </template>
 
 <script>
 
-const URL = 'http://www.omdbapi.com/?apikey=a5a387ab&s=Man';
+const URL = 'http://www.omdbapi.com/?apikey=a5a387ab&s=';
 
 export default {
     name: "SearchMovie",
@@ -80,5 +82,13 @@ export default {
 
     label{
         font-family: 'Roboto';
+        margin-bottom:20px;
+    }
+
+    .movie_list {
+        display: flex;
+        justify-content: center;
+        gap: 50px;
+        flex-wrap: wrap;
     }
 </style>
