@@ -1,5 +1,5 @@
 {
-  "name": "search_films",
+  "name": "vuex-lesson",
   "version": "0.1.0",
   "private": true,
   "scripts": {
