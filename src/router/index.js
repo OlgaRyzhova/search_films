@@ -1,20 +1,14 @@
 import Vue from 'vue';
 import VueRouter from 'vue-router';
-import HomeView from '../views/HomeView.vue'
 import SearchMovie from '../components/SearchMovie.vue';
 
 Vue.use(VueRouter)
 
 const routes = [
   {
-    path: '/',
-    name: 'home',
-    component: HomeView
-  },
-  {
-    path: '/movies',
+    path: '/movie',
     name: 'SearchMovie',
-    component: () => import('../components/SearchMovie.vue')
+    component: SearchMovie
   },
 ]
 

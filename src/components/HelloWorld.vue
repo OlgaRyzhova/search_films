@@ -1,6 +1,9 @@
 <template>
   <div> 
     <h1>Search Movie</h1>
+    <router-link to="/movies">Movies</router-link>
+
+    <router-view/>
   </div>
 </template>
 

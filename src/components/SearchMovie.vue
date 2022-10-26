@@ -9,19 +9,21 @@
         movie
         <input type="radio" name="type" value="movie" id="" checked>
         </label>
+
         <label>
         series
         <input type="radio" name="type" value="series" id="">
         </label>
+
         <label>
         episode
         <input type="radio" name="type" value="episode" id="">
         </label>
 
-        <div v-for="movie in movies" :key="movies.imdbID">
-        <img :src="movie.Poster" alt=":movie.Title">
+        <router-link :to="`/movie/${movie.imdbID}`" v-for="movie in movies" :key="movie.imdbID">
+        <img :src="movie.Poster" :alt="movie.Title">
         <h2>{{ movie.Title }}</h2>
-        </div>
+        </router-link>
 
     </div>
 </template>
@@ -48,7 +50,7 @@ export default {
         async searchMovieList() {
         const res = await fetch(URL + this.findMovie);
         const movies = await res.json();
-        this.movies = movies.Search
+        this.movies = movies.Search;
         }
     }
 }
