@@ -11,6 +11,8 @@ var _vueRouter = _interopRequireDefault(require("vue-router"));
 
 var _SearchMovie = _interopRequireDefault(require("../components/SearchMovie.vue"));
 
+var _MovieSingle = _interopRequireDefault(require("../components/MovieSingle.vue"));
+
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { "default": obj }; }
 
 _vue["default"].use(_vueRouter["default"]);
@@ -19,6 +21,10 @@ var routes = [{
   path: '/movie',
   name: 'SearchMovie',
   component: _SearchMovie["default"]
+}, {
+  path: '/movie/:id',
+  name: 'MovieSingle',
+  component: _MovieSingle["default"]
 }];
 var router = new _vueRouter["default"]({
   mode: 'history',

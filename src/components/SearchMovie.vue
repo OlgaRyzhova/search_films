@@ -75,9 +75,12 @@ export default {
     button{
         background-color: grey;
         border: none;
-        border-radius: 3px;
+        border-radius: 2px;
         color: white;
-        padding: 4px 10px;
+        padding: 5px 10px;
+    }
+    button:hover{
+        background-color: black;
     }
 
     label{
